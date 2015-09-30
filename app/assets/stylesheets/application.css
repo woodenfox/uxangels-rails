@@ -13,3 +13,227 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+ * Globals
+ */
+
+@keyframes color-burn-text {
+	
+	0% {
+		color:#04bdeb;
+	}
+	
+	50% {
+		color:#3385cc;
+	}	
+	
+	100% {
+		color:#04bdeb;
+	}
+
+}
+
+@keyframes color-burn-all {
+	
+	0% {
+		border-color:#04bdeb;
+		color:#04bdeb;
+	}
+	
+	50% {
+		border-color:#3385cc;
+		color:#3385cc;
+	}	
+	
+	100% {
+		border-color:#04bdeb;
+		color:#04bdeb;
+	}
+
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #000;
+}
+
+/* Custom default button */
+.btn-default, .btn-lg
+ {
+  padding: 10px 20px;
+  font-weight: 500;
+  border: solid 2px #04bdeb;
+  color:#04bdeb;
+  animation: color-burn-all 7s ease-in-out infinite;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-size:cover;
+}
+
+.navbar {
+	margin-bottom:0px;
+}
+
+textarea, input {
+	font-size:16px;
+}
+
+body {
+  text-align: center;
+}
+
+
+
+.mike-pic {
+  background: url(https://media.licdn.com/media/p/7/005/050/1f5/1946ab5.jpg);
+}
+
+ .dirk-pic {
+  background: url(https://media.licdn.com/media/p/5/005/01a/13f/08a0a9d.jpg);  
+ }
+
+.profile-pic {
+  width:200px;
+  height: 200px;
+  background-size:190px;
+  background-position:center;
+  background-repeat:no-repeat;
+  border-radius:99px;
+  border: 6px solid #04bdeb;
+  animation: color-burn-all 14s ease-in-out infinite;
+  margin:25px auto;
+ }
+ 
+
+
+
+p, li {
+	font-size:20px;
+	line-height: 30px;
+	font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight:300; 
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Oxygen', sans-serif;	
+}
+
+li {
+	font-size:20px;
+	line-height: 30px;
+}
+
+.main {
+	text-align: left;
+	font-size:20px;
+
+}
+
+.cover-heading-a {
+  font-size: 12em;
+  margin-bottom:-60px;
+  color:#04bdeb;
+  font-weight:700;
+  animation: color-burn-text 7s ease-in-out infinite;  
+
+}
+
+.cover-heading-b {
+  font-size: 5.5em;
+  font-family: 'Oxygen', sans-serif;
+}
+
+.sub-quote {
+	display:none;
+}
+
+@media (min-width: 992px) {
+
+  /* Handle the widths */
+  .cover-heading-a {
+	  margin-top: 50px;
+	  font-size: 13em;	  
+  }
+    
+  .sub-quote {
+	  display:block;
+  }
+  
+  .cover-heading-b {
+	  margin-bottom:30px;
+	  font-size: 6em;
+  }
+}
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom:50px;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+.footer {
+	margin-top:40px;
+	padding:70px;
+	background-color: #262F36;
+	color:white;
+	text-align: center;
+}
+
+.footer p {
+		font-size:15px;
+		line-height:1.6;
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+
+  /* Handle the widths */
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .cover-container {
+    width: 700px;
+  }
+}
