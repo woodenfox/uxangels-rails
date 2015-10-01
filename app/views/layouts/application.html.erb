@@ -31,14 +31,45 @@ Page Layout, Design, CSS & HTML by @woodenfox -->
   
   <!-- BOOTSTRAP CSS 3.3.5 CDN: --> <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
   <!-- OXYGEN FONT CDN: --> <link href='https://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
-  <!-- WORK SANS FON CDNT: --><link href='https://fonts.googleapis.com/css?family=Work+Sans:700,500,300'rel='stylesheet' type='text/css'><!-- Prefix (CSS Auto-syntax) -->
+  <!-- WORK SANS FON CDNT: --><link href='https://fonts.googleapis.com/css?family=Work+Sans:700,500,300'rel='stylesheet' type='text/css'>
   <!-- ANIMATE CSS CDN --><link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css"rel="stylesheet">
 
 </head>
 
 <body>
 
+<!--- HEADER 
+====================================== -->
+
+     <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><span style="color: #04bdeb">UX</span><span style="font-family: 'Oxygen', sans-serif;">Angels</span></a>
+
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact-us.html">Contact</a></li>          
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<!--- MAIN YIELD 
+====================================== -->
+
   <%= yield %>
+
+
+<!--- FOOTER 
+====================================== -->
   
   <footer class="footer">
 	  
@@ -48,7 +79,7 @@ Page Layout, Design, CSS & HTML by @woodenfox -->
     <p>
       Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. Antoine de Saint-Exupery
     </p>
-    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="front-images/creative-commons.png"/></a>
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="<%=image_path("creative-commons.png")%>"></a>
  
   </footer>
   
