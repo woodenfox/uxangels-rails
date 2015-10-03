@@ -43,7 +43,7 @@
 }
 
 .fadeIn {
-  animation: fadeIn 0.5 linear;
+  animation: fadeIn 0.5s linear;
 }
 
 /* Links */
