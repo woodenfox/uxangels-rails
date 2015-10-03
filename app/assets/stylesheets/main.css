@@ -35,7 +35,6 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    position:
   }
 
   100% {
@@ -44,7 +43,7 @@
 }
 
 .fadeIn {
-  animation: fadeIn 0.5s linear;
+  animation: fadeIn 0.5 linear;
 }
 
 /* Links */
@@ -76,7 +75,7 @@ body {
 }
 
 .navbar {
-	margin-bottom:0px !important;
+	margin-bottom:0 !important;
 }
 
 textarea, input {
