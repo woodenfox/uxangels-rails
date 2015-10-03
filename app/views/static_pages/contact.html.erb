@@ -1,0 +1,85 @@
+<!--- CONTACT US
+====================================== -->
+
+	<div class="container" style="padding-top:40px; padding-bottom:80px;">
+		<div class="row">
+			<div class="col-md-12" style="max-width: 600px; margin: 0 auto; float: none;">
+				<h1>Reach out to us Anytime</h1>
+
+
+				<p>We read every message. Take a moment and drop us a
+				line.</p>
+
+
+				<form class="contact-form" id="contact-form" name=
+				"contact-form">
+					
+						<div class="form-group">
+							<textarea class="form-control textarea" id=
+							"Message" name="Message" placeholder=
+							"Write something..." rows="3" style=
+							"font-size: 18px;"></textarea>
+						</div>
+					
+						<div class="form-group">
+							<input autocomplete="off" class="form-control" id=
+							"email" name="email" placeholder=
+							"Write your email address..." type="email" style=
+							"font-size: 18px; margin-bottom: 20px;">
+						</div>
+
+						<div>
+							<button class="btn btn-lg btn-default" type=
+							"submit">Send a message</button>
+						</div>
+
+				</form>
+			</div>
+
+		</div>
+	</div>
+	
+<!-- Form Validator
+================================================== -->
+
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"
+	type="text/javascript"></script> 
+	
+	<script>
+		$('#contact-form').bootstrapValidator({
+	//        live: 'disabled',
+		message: 'This value is not valid',
+		
+		feedbackIcons: {
+			valid: 'glyphicon glyphicon-ok',
+			invalid: 'glyphicon glyphicon-remove',
+			validating: 'glyphicon glyphicon-refresh'
+		},
+		fields: {
+			Name: {
+				validators: {
+					notEmpty: {
+						message: 'The Name is required and cannot be empty'
+					}
+				}
+			},
+			email: {
+				validators: {
+					notEmpty: {
+						message: 'The email address is required'
+					},
+					emailAddress: {
+						message: 'The email address is not valid'
+					}
+				}
+			},
+			Message: {
+				validators: {
+					notEmpty: {
+						message: 'The Message is required and cannot be empty'
+					}
+				}
+			}
+		}
+	});
+	</script>
