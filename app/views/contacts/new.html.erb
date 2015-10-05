@@ -1,0 +1,27 @@
+<!--- CONTACT US
+====================================== -->
+
+<div class="container" style="padding-top:40px; padding-bottom:80px;">
+	<div class="row">
+		<div class="col-md-12" style="max-width: 600px; margin: 0 auto; float: none;">
+			<h1>Reach out to us Anytime</h1>
+
+			<p>We read every message. Take a moment and drop us a
+			line.</p>
+
+			<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+			    <%= f.input :message, :as => :text, :required => true %>
+			    <%= f.input :email, :required => true %>
+			    <div class= "hidden">
+			      <%= f.input :nickname, :hint => 'Leave this field blank!' %>
+			    </div>
+			    <div>
+			      </br>
+			      <%= f.button :submit, 'Send message', :class=> "btn btn-lrg btn-uxa" %>
+			    </div>
+			<% end %>
+			
+		</div>
+
+	</div>
+</div>

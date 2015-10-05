@@ -6,8 +6,10 @@ Rails.application.routes.draw do
   get 'static_pages/joinus'
 
   get 'static_pages/requestus'
-
-  get 'static_pages/contact'
+  
+  # Contact Us Page (Mail_form bit.ly/1OccRsc)
+  match '/contacts',     to: 'contacts#new',             via: 'get'
+  resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
