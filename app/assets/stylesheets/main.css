@@ -89,6 +89,16 @@ a:hover {
   color: #000;
 }
 
+.hero-block {
+  background: no-repeat; 
+  color: white; 
+  text-align: left; 
+  background-size: cover; 
+  background-position: center;
+  height:350px;
+  padding-top: 30px;
+}
+
 /* Custom default button */
 .btn-uxa
  {
@@ -96,6 +106,10 @@ a:hover {
     font-weight: 500;
     border: solid 2px #04bdeb;
     color: #04bdeb;
+    animation: color-burn-all 7s ease-in-out infinite;
+}
+
+.color-burn-text {
     animation: color-burn-all 7s ease-in-out infinite;
 }
 
@@ -120,10 +134,6 @@ body {
 
 textarea, input, .form-control {
 	font-size:18px;
-}
-
-body {
-  text-align: center;
 }
 
 label .contact-us {
