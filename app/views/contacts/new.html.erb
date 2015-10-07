@@ -9,7 +9,7 @@
 			<p>We read every message. Take a moment and drop us a
 			line.</p>
 
-			<%= simple_form_for @contact, :html => {:class => 'form-horizontal' } do |f| %>
+			<%= simple_form_for @contact, :html => {:class => 'contact-form' } do |f| %>
 			    <%= f.input :message, :as => :text, :required => true %>
 			    <%= f.input :email, :required => true %>
 			    <div class= "hidden">
