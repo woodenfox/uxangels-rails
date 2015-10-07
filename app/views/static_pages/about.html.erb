@@ -4,25 +4,23 @@
 	<div class="container" style="padding-top:40px; text-align:left;">
 		<h1>The UXA Team</h2><hr>
 		
-		<!-- LONG TERM SOLUTION 
-  		
-  		<X Angel.all.each do |angel| %>
-  		  <p><X= angel.name %></p>
-  		  <p><X= angel.bio %></p>
-  		  <p><X= angel.picture %></p>	
-      <X end %>
+		<!-- 
+      Product manager, front end engineer, and UX designer, Mike managed the launch of Amazon Follow—allowing customers to receive personal release announcements from authors on Amazon. He also launched an Amazon internal version of Qualtrics, a user research and survey tool. As VP of Product at Talenthouse, a social network for artists, he grew the user base from 1K users to >1.2MM and played a principal role in closing our $13.1M Series B.  				
     -->
 
-		<!-- MIKE BIO #### -->
+  <% Angel.all.each do |angel| %>
+
 		<div class="row">			
 			<div class="col-sm-4 col-md-3">
-				<div class="profile-pic" style="background-image: url(https://media.licdn.com/media/p/7/005/050/1f5/1946ab5.jpg)"></div>
+				<div class="profile-pic" style="background-image: url(<%= angel.img %>)"></div>
 			</div>
 			<div class="col-sm-8 col-md-9">
-				<h3>Mike Messenger (Seattle) </h3>
-				<p>Product manager, front end engineer, and UX designer, Mike managed the launch of Amazon Follow—allowing customers to receive personal release announcements from authors on Amazon. He also launched an Amazon internal version of Qualtrics, a user research and survey tool. As VP of Product at Talenthouse, a social network for artists, he grew the user base from 1K users to >1.2MM and played a principal role in closing our $13.1M Series B.  				</p>
+				<h3><%= angel.name %> (<%= angel.location %>)</h3>
+				<p><%= angel.bio %></p>
 			</div>	
 		</div>
+		
+  <% end %>
 		
 		<!-- JIM BIO #### -->
 		<div class="row">			
