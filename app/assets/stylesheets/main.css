@@ -1,86 +1,5 @@
-@keyframes color-burn-text {
-	
-	0% {
-		color:#04bdeb;
-	}
-	
-	50% {
-		color:#3385cc;
-	}	
-	
-	100% {
-		color:#04bdeb;
-	}
 
-}
 
-@keyframes color-burn-all {
-	
-	0% {
-		border-color:#04bdeb;
-		color:#04bdeb;
-	}
-	
-	50% {
-		border-color:#3385cc;
-		color:#3385cc;
-	}	
-	
-	100% {
-		border-color:#04bdeb;
-		color:#04bdeb;
-	}
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.fadeIn {
-  animation: fadeIn 0.5s linear;
-}
-
-/* Contact us page */
-
-.hidden { display: none; }
-
-#new_contact .simple-form-label {
-    display: none;
-}
-
-.alert-error {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-text-align: left;
-}
-
-.alert-alert {
-background-color: #f2dede;
-border-color: #eed3d7;
-color: #b94a48;
-text-align: left;
-}
-
-.alert-success {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
-}
-
-.alert-notice {
-background-color: #dff0d8;
-border-color: #d6e9c6;
-color: #468847;
-text-align: left;
-}
 
 /* Links */
 a,
@@ -99,24 +18,6 @@ a:hover {
   padding-top: 30px;
 }
 
-/* Custom default button */
-.btn-uxa
- {
- 	padding: 10px 20px;
-    font-weight: 500;
-    border: solid 2px #04bdeb;
-    color: #04bdeb;
-    animation: color-burn-all 7s ease-in-out infinite;
-}
-
-.color-burn-text {
-    animation: color-burn-all 7s ease-in-out infinite;
-}
-
-.btn-uxa:hover {
-	color: #04bdeb;
-}
-
 
 /*
  * Base structure
@@ -125,7 +26,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-size:cover;
 }
 
 .navbar {
@@ -136,8 +36,18 @@ textarea, input, .form-control {
 	font-size:18px;
 }
 
-label .contact-us {
-	display:none;
+/* Custom default button */
+.btn-uxa
+{
+  padding: 10px 20px;
+  font-weight: 500;
+  border: solid 2px #04bdeb;
+  color: #04bdeb;
+  animation: color-burn-all 7s ease-in-out infinite;
+}
+
+.btn-uxa:hover {
+	color: #04bdeb;
 }
 
 
@@ -145,9 +55,9 @@ label .contact-us {
   background: url(https://media.licdn.com/media/p/7/005/050/1f5/1946ab5.jpg);
 }
 
- .dirk-pic {
+.dirk-pic {
   background: url(https://media.licdn.com/media/p/5/005/01a/13f/08a0a9d.jpg);  
- }
+}
 
 .profile-pic {
   width:200px;
@@ -159,10 +69,7 @@ label .contact-us {
   border: 6px solid #04bdeb;
   animation: color-burn-all 14s ease-in-out infinite;
   margin:25px auto;
- }
- 
-
-
+}
 
 p, li {
 	font-size:20px;
@@ -186,10 +93,38 @@ li {
 
 }
 
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+}
+
+.footer {
+	margin-top:40px;
+	padding:70px;
+	background-color: #262F36;
+	color:white;
+	text-align: center;
+}
+
+.footer p {
+		font-size:15px;
+		line-height:1.6;
+}
+
+
+/* Home Page Main Display
+ _   _  _____  __  __  ____    ____   __    ___  ____ 
+( )_( )(  _  )(  \/  )( ___)  (  _ \ /__\  / __)( ___)
+ ) _ (  )(_)(  )    (  )__)    )___//(__)\( (_-. )__) 
+(_) (_)(_____)(_/\/\_)(____)  (__) (__)(__)\___/(____)
+
+*/
+
 .cover-heading-a {
   font-size: 12em;
   margin-bottom:-60px;
-  color:#04bdeb;
+  color:#3385cc;
   font-weight:700;
   animation: color-burn-text 7s ease-in-out infinite;  
 
@@ -211,75 +146,142 @@ li {
 	  margin-top: 50px;
 	  font-size: 13em;	  
   }
-    
-  .sub-quote {
-	  display:block;
-  }
   
   .cover-heading-b {
 	  margin-bottom:30px;
 	  font-size: 6em;
   }
-}
-
-
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
-  width: 100%;
-}
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom:50px;
-}
-
-/* Padding for spacing */
-.inner {
-  padding: 30px;
-}
-
-.footer {
-	margin-top:40px;
-	padding:70px;
-	background-color: #262F36;
-	color:white;
-	text-align: center;
-}
-
-.footer p {
-		font-size:15px;
-		line-height:1.6;
-}
-
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 20px;
-}
-
-
-/*
- * Affix and center
- */
-
-@media (min-width: 768px) {
-
-  /* Handle the widths */
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  
+  .sub-quote {
+	  display:block;
   }
 }
 
-@media (min-width: 992px) {
-  .cover-container {
-    width: 700px;
-  }
+
+/* Contact us page 
+  ___  _____  _  _  ____   __    ___  ____    __  __  ___ 
+ / __)(  _  )( \( )(_  _) /__\  / __)(_  _)  (  )(  )/ __)
+( (__  )(_)(  )  (   )(  /(__)\( (__   )(     )(__)( \__ \
+ \___)(_____)(_)\_) (__)(__)(__)\___) (__)   (______)(___/
+
+*/
+
+.hidden { display: none; }
+
+#new_contact .simple-form-label {
+  display: none;
 }
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+
+/* 
+_______       _____                  __________                     
+___    |_________(_)______ _________ __  /___(_)____________________
+__  /| |_  __ \_  /__  __ `__ \  __ `/  __/_  /_  __ \_  __ \_  ___/
+_  ___ |  / / /  / _  / / / / / /_/ // /_ _  / / /_/ /  / / /(__  ) 
+/_/  |_/_/ /_//_/  /_/ /_/ /_/\__,_/ \__/ /_/  \____//_/ /_//____/  
+                                                                      
+*/
+
+@keyframes breathe {
+        0% {
+          opacity: 0.9;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.9;
+        }
+      }
+      
+      .breathe {
+          animation: breathe 7s ease-in-out infinite;  
+      }
+
+/* COLOR BURN ANIMATION */
+
+@keyframes color-burn-all {
+	
+      	0% {
+      		border-color:#04bdeb;
+      		color:#04bdeb;
+      	}
+      	
+      	50% {
+      		border-color:#3385cc;
+      		color:#3385cc;
+      	}	
+      	
+      	100% {
+      		border-color:#04bdeb;
+      		color:#04bdeb;
+      	}
+      }
+
+      .color-burn-all {
+        animation: color-burn-all 7s ease-in-out infinite;
+      }
+
+@keyframes color-burn-text {
+	
+    	0% {
+    		color:#04bdeb;
+    	}
+    	
+    	50% {
+    		color:#3385cc;
+    	}	
+    	
+    	100% {
+    		color:#04bdeb;
+    	}
+    
+    }
+    
+    .color-burn-text {
+      animation: color-burn-all 7s ease-in-out infinite;
+    }
+
+/* FADE IN */
+
+@keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+    
+      100% {
+        opacity: 1;
+      }
+    }
+    
+    .fadeIn {
+      animation: fadeIn 0.5s linear;
+    }
