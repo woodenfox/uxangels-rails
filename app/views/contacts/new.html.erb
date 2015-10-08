@@ -1,12 +1,20 @@
 <!--- CONTACT US
 ====================================== -->
 
-<div class="container" style="padding-top:40px; padding-bottom:80px;">
+<div class="container" style="padding-bottom:80px; text-align:center;">
 	<div class="row">
 		<div class="col-md-12" style="max-width: 600px; margin: 0 auto; float: none;">
-			<h1>Reach out to us Anytime</h1>
+			
+			<% unless params[:id].nil? || params[:id] == 0 %>
+			  <% angel = Angel.find(params[:id]) %>
+			  <div class="profile-pic-sm" style="background-image: url(<%= angel.img %>)"></div>
+			  <h1>Contact <%= angel.name %></h1>
+			
+			<% else %>
+			  <h1 style="margin-top:20px;">Reach out to us Anytime</h1>
+			<% end %>
 
-			<p>We read every message. Take a moment and drop us a
+			<p>We read every message. Drop us a
 			line.</p>
 
 			<%= simple_form_for @contact, :html => {:class => 'contact-form' } do |f| %>

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   # Contact Us Page (Mail_form bit.ly/1OccRsc)
   match '/contacts',     to: 'contacts#new',             via: 'get'
+  get '/contacts/:id', to: 'contacts#new'
+  
   resources "contacts", only: [:new, :create]
 
   # The priority is based upon order of creation: first created -> highest priority.
